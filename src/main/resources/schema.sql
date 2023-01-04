@@ -7,10 +7,19 @@ CREATE TABLE officers (
   PRIMARY KEY (id)
 );
 CREATE TABLE toy (
-                     classType VARCHAR(50) NOT NULL,
                      id        uuid NOT NULL,
-                     name      VARCHAR(50) NOT NULL,
-                     toySize   VARCHAR(5) NOT NULL,
-                     producerId INTEGER NOT NULL,
-                     numberOfWheels INTEGER
+                     name VARCHAR(50) NOT NULL,
+                     size      VARCHAR(50) NOT NULL,
+                     speed   VARCHAR(5) NOT NULL,
+                     distance INTEGER NOT NULL,
+                     numberOfWheels INTEGER,
+                     type VARCHAR(10) NOT NULL
 );
+/*
+         name: string
+        size: string
+        speed: number
+        distance: number
+        wheels? : number
+        type: string
+ */
