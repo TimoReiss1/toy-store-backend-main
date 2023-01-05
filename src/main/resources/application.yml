@@ -1,9 +1,10 @@
-spring:
-    jpa:
-        hibernate:
-            ddl-auto: update
-        properties:
-            hibernate.format_sql: true
+#spring:
+ #   jpa:
+  #      hibernate:
+   #         ddl-auto: update
+    #    properties:
+     #       hibernate.format_sql: true
 logging:
     level:
-        sql: info
+        root: INFO
+        com: INFO

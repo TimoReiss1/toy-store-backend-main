@@ -25,8 +25,10 @@ ALTER TABLE toy ADD FOREIGN KEY (producerId) REFERENCES producer (id);
 /***                              Test Data                                 ***/
 /******************************************************************************/
 INSERT INTO producer (name) VALUES ('EosToys', 'Steindamm71');
-INSERT INTO toy (uuid, name, size, speed, distance, wheels, type) VALUES ('Car', '5b9dbead-7aee-453c-a96d-2cd708d9fd7c', 'Ford-GT40', 'XL', '1', '4');
+/*
+INSERT INTO toy (uuid, name, size, speed, distance, wheels, type) VALUES (5b9dbead-7aee-453c-a96d-2cd708d9fd7c', 'Car', 'Ford-GT40', 'XL', '1', '4');
 
+ */
 INSERT INTO warehouse (numberOfRows, numberOfColumns, shelfSize) VALUES ('10', '10', '50');
 /*        name: string
         size: string

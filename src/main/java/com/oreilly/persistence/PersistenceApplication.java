@@ -5,13 +5,11 @@ import com.oreilly.persistence.Helper.ToyInformation;
 import com.oreilly.persistence.dao.OfficerRepository;
 import com.oreilly.persistence.dao.ToyRepository;
 import com.oreilly.persistence.entities.*;
-import org.apache.coyote.Response;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -58,7 +56,7 @@ public class PersistenceApplication {
     record NewOfficerRequest(Rank rank,String firstName,String lastName){
     }
 
-    record NewToyRequest(String name, ToySize size, int speed, int distance, int wheels, String type) {
+    record NewToyRequest(String name, ToySize size, int speed, int distanceTraveled, int amountOfWheels, String type) {
 
     }
 
@@ -70,8 +68,8 @@ public class PersistenceApplication {
             toyInformation.setName(request.name());
             toyInformation.setSize(request.size());
             toyInformation.setSpeed(request.speed());
-            toyInformation.setDistance(request.distance());
-            toyInformation.setAmountOfWheels(request.wheels());
+            toyInformation.setDistance(request.distanceTraveled());
+            toyInformation.setAmountOfWheels(request.amountOfWheels());
             toyInformation.setType(request.type());
             toyRepository.save(toyFactory.createToy(toyInformation));
             return ResponseEntity.ok(toyFactory.createToy(toyInformation));
